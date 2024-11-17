@@ -9,7 +9,7 @@
 
 use num_cpus;
 use std::cmp;
-use BlueHash::DigestSize::Bit256;
+use BlueHash::DigestSize::{Bit256};
 use rand::Rng;
 use crate::fft::{LOCAL_N, LOCAL_Q};
 
@@ -17,7 +17,7 @@ use crate::fft::{LOCAL_N, LOCAL_Q};
 pub fn get_optimal_thread_count() -> usize {
     let cpu_cores = num_cpus::get();
     if LOCAL_N > 1000 {
-        cmp::min(cpu_cores * 2, 12)
+        cmp::min(cpu_cores * 2, 16)
     } else {
         cmp::min(cpu_cores, 8)
     }

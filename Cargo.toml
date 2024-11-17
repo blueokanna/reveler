@@ -1,0 +1,22 @@
+[package]
+name = "reveler"
+description = "A cryptographic commitment scheme based on lattice and parallelized matrix-vector multiplication."
+authors = ["blueokanna","blueokanna@gmail.com"]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/blueokanna/reveler"
+keywords = ["Algorithms", "Commitments", "Crypto"]
+
+
+[dependencies]
+rustfft = "6.2.0"
+rand = "0.8.5"
+num_cpus = "1.16.0"
+BlueHash ="0.1.4"
+criterion = { version = "0.5.1", features = ["plotters"] }
+
+[[bench]]
+name = "bluebench"
+harness = false

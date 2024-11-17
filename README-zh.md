@@ -13,7 +13,7 @@
 
 ## 生成承诺
 
-承诺 "函数通过以下步骤计算承诺：
+**Reveler** 函数通过以下步骤计算承诺：
 
 1. 生成**矩阵**： 使用 `generate_params` 函数生成随机矩阵 `A` 和 `B`。这些矩阵将用于基于 FFT 的矩阵乘法。
 
@@ -23,25 +23,26 @@
 
 2. **FFT矩阵乘法**： 对于矩阵（A）中的每一行（a_i \）和矩阵（B）中的每一行（b_i \），我们执行基于 FFT 的矩阵乘法：
 
-![p2](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p2.jpg)
+   ![p2](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p2.jpg)
 
-其中分别表示 FFT 变换后的行与矢量 \( m \)和 \( r \)的元素相乘。
+   其中分别表示 FFT 变换后的行与矢量 \( m \)和 \( r \)的元素相乘。
 
 3. **承诺点计算**： 每一行的 FFT 结果之和的计算公式为
 
-![p3](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p3.jpg)
+   ![p3](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p3.jpg)
+   
 
-**由此得出一个承诺点:** 
+   **由此得出一个承诺点:** 
 
-![p4](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p4.jpg) 
+   ![p4](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p4.jpg) 
 
 4. **承诺哈希**： 然后使用 BlueHash 算法对承诺点 \( C \) 进行散列。BlueHash 算法采用多轮散列，以增加随机性和安全性：
 
-![p5](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p5.jpg)
+   ![p5](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p5.jpg)
 
-经过 3 轮 BlueHash 算法散列后，就得到了最终的承诺散列值。
+   经过 3 轮 BlueHash 算法 128-Bit 摘要散列后，就得到了最终的承诺散列值。
 
-承诺以结构体的形式返回，其中包含承诺点（C）和哈希值（H(C) ）。
+   承诺以结构体的形式返回，其中包含承诺点（C）和哈希值（H(C) ）。
 
 
 ### 代码结构

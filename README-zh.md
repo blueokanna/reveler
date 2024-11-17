@@ -31,7 +31,7 @@
 
 ![p3](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p3.jpg)
 
-由此得出一个承诺点 ![p4](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p4.jpg) 。
+**由此得出一个承诺点:** ![p4](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p4.jpg) 
 
 4. **承诺哈希**： 然后使用 BlueHash 算法对承诺点 \( C \) 进行散列。BlueHash 算法采用多轮散列，以增加随机性和安全性：
 

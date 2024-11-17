@@ -31,9 +31,10 @@ The `commit` function computes the commitment using the following steps:
 
    ![p3](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p3.jpg)
 
-   **This results in a commitment point:** ![p4](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p4.jpg)
+   **This results in a commitment point:**
+   ![p4](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p4.jpg)
 
-4. **Commitment Hashing**: The commitment point \( C \) is then hashed using the BlueHash algorithm. The BlueHash algorithm applies multiple rounds of hashing for added randomness and security:
+5. **Commitment Hashing**: The commitment point \( C \) is then hashed using the BlueHash algorithm. The BlueHash algorithm applies multiple rounds of hashing for added randomness and security:
 
    ![p5](https://raw.githubusercontent.com/blueokanna/reveler/refs/heads/main/image/p5.jpg)
 

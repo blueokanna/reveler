@@ -1,4 +1,4 @@
-# Reveler - [English Version]()
+# Reveler - [English Version](https://github.com/blueokanna/reveler/blob/main/README.md)
 
 该存储库基于优化的 FFT 和散列函数实现了一种加密承诺方案，旨在高效地生成和验证承诺。该方案使用快速傅立叶变换 (FFT) 进行矩阵乘法，使用基于 BlueHash 的散列进行承诺验证。
 
